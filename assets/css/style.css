@@ -3,3 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --color-primary: #f6d200;
+  --color-grey: #ededed;
+  --color-dark: #000;
+  --color-white: #fff;
+}

@@ -11,6 +11,13 @@
   --color-white: #fff;
 }
 
+body {
+  background-color: var(--color-grey);
+  line-height: 1.5;
+  font-family: 'Asap', sans-serif;
+  font-optical-sizing: auto;
+}
+
 ul {
   list-style: none;
 }
@@ -69,12 +76,88 @@ a:is(:link, :visited) {
   color: var(--color-primary);
 }
 
+.content-area {
+  display: flex;
+  flex-direction: column;
+}
 
-@media all and (min-width:768px) {
-  .navbar ul{
+.main-content-area {
+  padding: 10px;
+}
+
+/* POST SECTION CSS  */
+.post {
+  background-color: var(--color-white);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.post figure {
+  display: flex;
+  flex-direction: column;
+}
+
+.post img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.post h2 {
+  background-color: var(--color-primary);
+  text-align: center;
+  text-transform: capitalize;
+  padding: 15px;
+}
+
+.post p {
+  padding: 20px;
+}
+
+.post > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media all and (min-width: 768px) {
+  .navbar ul {
     flex-direction: row;
   }
-  .navbar ul li{
+  .navbar ul li {
+    flex-grow: 1;
+  }
+
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid red;
+    justify-content: space-between;
+  }
+
+  .post {
+    width: 49%;
+  }
+}
+
+@media all and (min-width: 1180px) {
+  .content-area {
+    flex-direction: row;
+  }
+
+  .sidebar-section {
+    flex: 0 0 400px;
+  }
+  .main-content-area {
+    flex-grow: 1;
+  }
+
+  .oneThird.post{
+    width: 32%;
+  }
+   .one.post{
     flex-grow: 1;
   }
 }

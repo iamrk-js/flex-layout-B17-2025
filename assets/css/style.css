@@ -127,6 +127,7 @@ a:is(:link, :visited) {
   margin: 15px 0;
   text-align: center;
   text-transform: capitalize;
+  line-height: 1.2;
 }
 
 /* WATCH NOW SECTION CSS  */
@@ -167,6 +168,60 @@ a:is(:link, :visited) {
   color: var(--color-white);
 }
 
+/* DOWNLOAD SECTION CSS  */
+
+.download-card {
+  background-color: var(--color-dark);
+}
+.download-card .download-img img {
+  width: 100%;
+}
+
+.download-content {
+  display: flex;
+  flex-direction: column;
+}
+
+a.download-link:is(:link, :visited) {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  font-size: 28px;
+  text-transform: capitalize;
+  color: var(--color-white);
+}
+
+.download-info {
+  background-color: var(--color-white);
+  padding: 20px;
+}
+
+.download-cast,
+.download-gener {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.download-cast h4,
+.download-gener h4 {
+  flex: 0 0 60px;
+  align-self: center;
+}
+
+.download-cast img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.download-rating {
+  background-color: var(--color-primary);
+  text-align: center;
+  padding: 20px;
+  font-weight: 700;
+}
+
 @media all and (min-width: 768px) {
   .navbar ul {
     flex-direction: row;
@@ -200,8 +255,15 @@ a:is(:link, :visited) {
     flex-direction: row-reverse;
   } */
 
-  .watchCard:nth-of-type(even) img{
+  .watchCard:nth-of-type(even) img {
     order: 1;
+  }
+
+  .download-content {
+    flex-direction: row;
+  }
+  .download-info {
+    flex-grow: 1;
   }
 }
 

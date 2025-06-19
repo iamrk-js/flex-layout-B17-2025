@@ -122,6 +122,51 @@ a:is(:link, :visited) {
   height: 100%;
 }
 
+.section-heading {
+  font-size: 48px;
+  margin: 15px 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* WATCH NOW SECTION CSS  */
+
+.watchCard {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.watchCard img {
+  width: 100%;
+}
+
+.watchCard figcaption {
+  padding: 20px;
+}
+
+.watchCard h3 {
+  font-size: 32px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.watchCard figcaption ul {
+  display: flex;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.watchCard figcaption ul li {
+  margin-right: 10px;
+}
+
+.watchCard a {
+  color: var(--color-white);
+}
+
 @media all and (min-width: 768px) {
   .navbar ul {
     flex-direction: row;
@@ -133,12 +178,30 @@ a:is(:link, :visited) {
   .posts {
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid red;
     justify-content: space-between;
   }
 
   .post {
     width: 49%;
+  }
+  .watchCard {
+    flex-direction: row;
+  }
+  .watchCard img {
+    width: 400px;
+    flex: 0 0 400px;
+  }
+
+  .watchCard figcaption {
+    align-self: center;
+  }
+
+  /* .watchCard:nth-of-type(even){
+    flex-direction: row-reverse;
+  } */
+
+  .watchCard:nth-of-type(even) img{
+    order: 1;
   }
 }
 
@@ -154,10 +217,10 @@ a:is(:link, :visited) {
     flex-grow: 1;
   }
 
-  .oneThird.post{
+  .oneThird.post {
     width: 32%;
   }
-   .one.post{
+  .one.post {
     flex-grow: 1;
   }
 }

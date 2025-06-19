@@ -222,6 +222,53 @@ a.download-link:is(:link, :visited) {
   font-weight: 700;
 }
 
+/* GALLARY SECTION  */
+
+.gallary-imgs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallary-img {
+  height: 350px;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.gallary-img a {
+  display: block;
+  height: 100%;
+}
+
+.gallary-img a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 20px;
+  text-align: center;
+}
+
+.wedget {
+  padding: 20px;
+}
+
+.wedget-card {
+    background: var(--color-white);
+    padding: 20px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.wedget-card ul {
+    padding-left: 15px;
+}
+
 @media all and (min-width: 768px) {
   .navbar ul {
     flex-direction: row;
@@ -264,6 +311,42 @@ a.download-link:is(:link, :visited) {
   }
   .download-info {
     flex-grow: 1;
+  }
+
+  /* 
+1 5 9  
+n = 0, 1, 2 ,3,4,5
+(4n + 1) >>  n = 0 == 1
+(4n + 1) >>  n = 1 == 5
+(4n + 1) >>  n = 2 == 9
+*/
+  .gallary-imgs {
+    margin-left: -10px;
+  }
+  .gallary-img {
+    margin-left: 10px;
+  }
+  .gallary-img:nth-child(4n + 1) {
+    width: 480px;
+    flex-basis: 480px;
+  }
+
+  /* 2 6 10 
+    n = 0, 1, 2 ,3,4,5
+
+    (4n + 2) >> n = 0 >> 2
+    (4n + 2) >> n = 1 >> 6
+    (4n + 2) >> n = 2 >> 10
+  */
+
+  .gallary-img:nth-child(4n + 2) {
+    width: 325px;
+    flex-basis: 325px;
+  }
+
+  .gallary-img:nth-child(4n + 3) {
+    width: 270px;
+    flex-basis: 270px;
   }
 }
 
